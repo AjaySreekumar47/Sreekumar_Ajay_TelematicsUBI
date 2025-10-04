@@ -1,0 +1,29 @@
+{
+  "model": "logistic_regression",
+  "n_train": 80,
+  "n_test": 20,
+  "calibration": "isotonic_cv3",
+  "AUC": 0.38,
+  "PR": 0.2349624060150376,
+  "Brier": 0.21850352960157018,
+  "AUC_CI": [
+    NaN,
+    NaN
+  ],
+  "PR_CI": [
+    0.08547932330827068,
+    0.5301538671023965
+  ],
+  "features": [
+    "trip_count",
+    "total_events",
+    "avg_speed_mps",
+    "speed_std",
+    "harsh_brake_rate",
+    "harsh_accel_rate",
+    "overspeed_rate",
+    "night_trip_ratio",
+    "weekend_trip_ratio",
+    "total_km"
+  ]
+}

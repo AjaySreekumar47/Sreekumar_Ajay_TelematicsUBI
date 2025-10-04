@@ -1,0 +1,4 @@
+rate_limit:
+  enabled: true
+  max_events_per_sec: 20
+  window_sec: 1.0

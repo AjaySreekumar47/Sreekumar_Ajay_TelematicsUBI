@@ -1,0 +1,22 @@
+{
+  "model": "linear_regression",
+  "n_claimants": 17,
+  "n_train": 13,
+  "n_test": 4,
+  "MAE": 1758.373872880812,
+  "RMSE": 2307.879876679531,
+  "R2": -12.796362459711313,
+  "NormGini": -0.7879477316106938,
+  "features": [
+    "trip_count",
+    "total_events",
+    "avg_speed_mps",
+    "speed_std",
+    "harsh_brake_rate",
+    "harsh_accel_rate",
+    "overspeed_rate",
+    "night_trip_ratio",
+    "weekend_trip_ratio",
+    "total_km"
+  ]
+}

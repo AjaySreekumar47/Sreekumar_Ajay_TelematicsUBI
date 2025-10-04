@@ -1,0 +1,22 @@
+# /content/config/simulator_full.yaml
+seed: 42
+num_drivers: 100
+events_per_second: 1
+
+trip:
+  min_minutes: 15
+  max_minutes: 25
+  avg_speed_mps: 13.9
+  speed_stddev: 3.0
+  harsh_brake_prob: 0.02
+  harsh_accel_prob: 0.02
+
+geofence:
+  lat_min: 37.60
+  lat_max: 37.95
+  lon_min: -122.55
+  lon_max: -122.10
+
+output:
+  format: ["parquet", "avro"]
+  path: "/content/data/raw/telematics_full/telematics_full"

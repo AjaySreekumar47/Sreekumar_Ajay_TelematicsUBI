@@ -1,0 +1,8 @@
+{
+  "run_time": "2025-10-04T21:42:46.848179",
+  "rows": 100,
+  "drivers": 100,
+  "frequency_model": "models/frequency_rf.pkl",
+  "severity_model": "models/severity_xgb.pkl",
+  "output_parquet": "data/training/driver_risk_scores.parquet"
+}

@@ -1,0 +1,6 @@
+{
+  "run_time": "2025-10-04T21:41:14.966075+00:00",
+  "drivers": 100,
+  "events_processed": 241800,
+  "output_file": "data/gold/driver_features.parquet"
+}

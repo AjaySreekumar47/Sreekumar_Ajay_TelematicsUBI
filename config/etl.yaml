@@ -1,0 +1,29 @@
+# ETL configuration for Bronze → Silver pipeline
+# Defines cleaning thresholds, enrichment options, and output paths
+
+thresholds:
+  min_speed_mps: 0           # No negative speeds
+  max_speed_mps: 80          # Clamp unrealistic > 288 km/h
+  max_accel_mps2: 12         # |a| <= 12 m/s² for sanity
+  max_heading_deg: 360       # heading ∈ [0, 360)
+  lat_range: [-90, 90]
+  lon_range: [-180, 180]
+
+sessionization:
+  max_gap_seconds: 300       # gap > 5 minutes → new session
+  enforce_monotonic_odometer: true
+
+output:
+  silver_path: "data/silver"              # Relative path
+  partition_on: ["event_date","driver_id"]
+  file_format: "parquet"
+  write_trip_level: true
+  schema_version: "v4_silver"
+
+enrichment:
+  compute_trip_summary: true   # derive duration, distance, avg speed
+  derive_safety_flags: true    # flag harsh events, outliers
+  drop_invalid_enums: true     # enforce only allowed enum values
+
+logging:
+  level: "INFO"

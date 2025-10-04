@@ -1,0 +1,19 @@
+thresholds:
+  harsh_brake: -3.0        # m/s² threshold for harsh braking
+  harsh_accel: 3.0         # m/s² threshold for harsh acceleration
+  overspeed_margin_kmh: 5  # km/h above posted speed limit considered overspeed
+  night_start: 21          # 21:00 UTC
+  night_end: 5             # 05:00 UTC
+
+temporal:
+  weekend_days: [5, 6]     # Saturday=5, Sunday=6 (0=Monday)
+
+input:
+  silver_events: "data/silver/silver_events.parquet"
+  silver_trips: "data/silver/silver_trips.parquet"
+  schema: "docs/schemas/telematics_event_v4.avsc"
+
+output:
+  gold_dir: "data/gold"
+  partition_on: ["driver_id"]   # partitioning for scalability
+  run_manifest: "data/gold/run_manifest.json"  # optional audit log

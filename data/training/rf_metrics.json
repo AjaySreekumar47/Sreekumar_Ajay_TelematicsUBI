@@ -1,0 +1,24 @@
+{
+  "model": "random_forest",
+  "n_train": 80,
+  "n_test": 20,
+  "AUC": 0.64,
+  "PR": 0.3459706959706959,
+  "Brier": 0.1828569856070184,
+  "AUC_CI": [
+    NaN,
+    NaN
+  ],
+  "features": [
+    "trip_count",
+    "total_events",
+    "avg_speed_mps",
+    "speed_std",
+    "harsh_brake_rate",
+    "harsh_accel_rate",
+    "overspeed_rate",
+    "night_trip_ratio",
+    "weekend_trip_ratio",
+    "total_km"
+  ]
+}

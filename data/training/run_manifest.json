@@ -1,0 +1,13 @@
+{
+  "run_time": "2025-10-04T21:41:51.396841",
+  "config_hash": "49dd484cd80782f0d4224bd4feffd40c",
+  "rows": 100,
+  "positives": 17,
+  "claim_rate": 0.17,
+  "mean_severity": 201.90722245567707,
+  "max_severity": 4287.798655614179,
+  "gamma_shape": 2.0,
+  "gamma_scale": 500.0,
+  "base_claim_probability": 0.2,
+  "feature_weighting": true
+}

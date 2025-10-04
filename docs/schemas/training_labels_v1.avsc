@@ -1,0 +1,109 @@
+{
+  "type": "record",
+  "name": "TrainingRecord",
+  "namespace": "com.insurance.telematics",
+  "doc": "Driver-level training set with engineered features and labels.",
+  "fields": [
+    {
+      "name": "driver_id",
+      "type": "string",
+      "doc": "Unique driver identifier"
+    },
+    {
+      "name": "trip_count",
+      "type": "int",
+      "doc": "Number of trips recorded"
+    },
+    {
+      "name": "total_events",
+      "type": "int",
+      "doc": "Total raw events processed"
+    },
+    {
+      "name": "avg_speed_mps",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Mean speed across trips"
+    },
+    {
+      "name": "speed_std",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Speed variability"
+    },
+    {
+      "name": "harsh_brake_rate",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Rate of harsh braking events"
+    },
+    {
+      "name": "harsh_accel_rate",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Rate of harsh acceleration events"
+    },
+    {
+      "name": "overspeed_rate",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Rate of overspeeding"
+    },
+    {
+      "name": "night_trip_ratio",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Proportion of trips at night"
+    },
+    {
+      "name": "weekend_trip_ratio",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Proportion of trips on weekends"
+    },
+    {
+      "name": "total_km",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Total kilometers driven"
+    },
+    {
+      "name": "claim_occurred",
+      "type": "boolean",
+      "doc": "Whether a claim occurred (binary target)"
+    },
+    {
+      "name": "claim_amount",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Severity of claim in currency units (0 if no claim)"
+    }
+  ]
+}

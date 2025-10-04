@@ -1,0 +1,25 @@
+{
+  "model": "xgboost_classifier",
+  "n_train": 80,
+  "n_test": 20,
+  "scale_pos_weight": 5.666666666666667,
+  "AUC": 0.6133333333333334,
+  "PR": 0.4242997198879551,
+  "Brier": 0.20893001082199497,
+  "AUC_CI": [
+    0.2810814950980392,
+    0.9411764705882353
+  ],
+  "features": [
+    "trip_count",
+    "total_events",
+    "avg_speed_mps",
+    "speed_std",
+    "harsh_brake_rate",
+    "harsh_accel_rate",
+    "overspeed_rate",
+    "night_trip_ratio",
+    "weekend_trip_ratio",
+    "total_km"
+  ]
+}

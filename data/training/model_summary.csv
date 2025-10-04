@@ -1,0 +1,7 @@
+Model,AUC,PR,Brier,MAE,RMSE,R2,config_hash,run_time,artifact
+Frequency — Logistic Regression,0.38,0.235,0.219,,,,-,-,/content/Sreekumar_Ajay_TelematicsUBI/models/frequency_logit.pkl
+Frequency — Random Forest,0.64,0.346,0.183,,,,-,-,/content/Sreekumar_Ajay_TelematicsUBI/models/frequency_rf.pkl
+Frequency — XGBoost Classifier,0.613,0.424,0.209,,,,-,-,/content/Sreekumar_Ajay_TelematicsUBI/models/frequency_xgb.pkl
+Severity — Linear Regression,,,,1758.37,2307.88,-12.796,-,-,/content/Sreekumar_Ajay_TelematicsUBI/models/severity_linreg.pkl
+Severity — XGBoost Regressor,,,,716.44,832.89,-0.797,-,-,/content/Sreekumar_Ajay_TelematicsUBI/models/severity_xgb.pkl
+Severity — Gamma GLM,,,,1277.33,1414.44,-4.182,-,-,/content/Sreekumar_Ajay_TelematicsUBI/models/severity_gamma_glm.pkl

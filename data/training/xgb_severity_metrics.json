@@ -1,0 +1,22 @@
+{
+  "model": "xgboost_regressor",
+  "n_claimants": 17,
+  "n_train": 13,
+  "n_test": 4,
+  "MAE": 716.4376005151009,
+  "RMSE": 832.8916268390012,
+  "R2": -0.7968639146258751,
+  "NormGini": -0.6256410442251074,
+  "features": [
+    "trip_count",
+    "total_events",
+    "avg_speed_mps",
+    "speed_std",
+    "harsh_brake_rate",
+    "harsh_accel_rate",
+    "overspeed_rate",
+    "night_trip_ratio",
+    "weekend_trip_ratio",
+    "total_km"
+  ]
+}

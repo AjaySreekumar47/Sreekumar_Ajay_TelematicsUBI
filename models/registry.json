@@ -1,0 +1,56 @@
+[
+  {
+    "name": "frequency_logit",
+    "version": "v1",
+    "data_hash": "bb0c3c15993992f2",
+    "artifact": "/content/Sreekumar_Ajay_TelematicsUBI/models/frequency_logit.pkl",
+    "metrics_path": "/content/Sreekumar_Ajay_TelematicsUBI/data/training/logit_metrics.json",
+    "created_at": "2025-10-04T21:42:15.146675+00:00",
+    "phase": "phase6"
+  },
+  {
+    "name": "frequency_rf",
+    "version": "v1",
+    "data_hash": "bb0c3c15993992f2",
+    "artifact": "/content/Sreekumar_Ajay_TelematicsUBI/models/frequency_rf.pkl",
+    "metrics_path": "/content/Sreekumar_Ajay_TelematicsUBI/data/training/rf_metrics.json",
+    "created_at": "2025-10-04T21:42:16.150675+00:00",
+    "phase": "phase6"
+  },
+  {
+    "name": "frequency_xgb",
+    "version": "v1",
+    "data_hash": "bb0c3c15993992f2",
+    "artifact": "/content/Sreekumar_Ajay_TelematicsUBI/models/frequency_xgb.pkl",
+    "metrics_path": "/content/Sreekumar_Ajay_TelematicsUBI/data/training/xgb_metrics.json",
+    "created_at": "2025-10-04T21:42:16.909285+00:00",
+    "phase": "phase6"
+  },
+  {
+    "name": "severity_linreg",
+    "version": "v1",
+    "data_hash": "bb0c3c15993992f2",
+    "artifact": "/content/Sreekumar_Ajay_TelematicsUBI/models/severity_linreg.pkl",
+    "metrics_path": "/content/Sreekumar_Ajay_TelematicsUBI/data/training/linreg_severity_metrics.json",
+    "created_at": "2025-10-04T21:42:16.938894+00:00",
+    "phase": "phase6"
+  },
+  {
+    "name": "severity_xgb",
+    "version": "v1",
+    "data_hash": "bb0c3c15993992f2",
+    "artifact": "/content/Sreekumar_Ajay_TelematicsUBI/models/severity_xgb.pkl",
+    "metrics_path": "/content/Sreekumar_Ajay_TelematicsUBI/data/training/xgb_severity_metrics.json",
+    "created_at": "2025-10-04T21:42:17.084542+00:00",
+    "phase": "phase6"
+  },
+  {
+    "name": "severity_gamma_glm",
+    "version": "v1",
+    "data_hash": "bb0c3c15993992f2",
+    "artifact": "/content/Sreekumar_Ajay_TelematicsUBI/models/severity_gamma_glm.pkl",
+    "metrics_path": "/content/Sreekumar_Ajay_TelematicsUBI/data/training/gamma_glm_metrics.json",
+    "created_at": "2025-10-04T21:42:17.124674+00:00",
+    "phase": "phase6"
+  }
+]

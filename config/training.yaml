@@ -1,0 +1,14 @@
+labels:
+  claim_probability: 0.05     # Base probability of a claim within 30 days
+  claim_severity:             # Severity distribution parameters
+    distribution: gamma
+    shape: 2.0
+    scale: 500.0
+  random_seed: 42             # For reproducibility
+
+input:
+  gold_features: "data/gold/driver_features.parquet"
+
+output:
+  training_dir: "data/training"
+  schema: "docs/schemas/training_labels_v1.avsc"

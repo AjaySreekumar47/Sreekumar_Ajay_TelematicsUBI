@@ -1,0 +1,95 @@
+{
+  "type": "record",
+  "name": "DriverFeaturesGold",
+  "namespace": "com.insurance.telematics",
+  "doc": "Aggregated driver-level features for Gold layer (Phase 4).",
+  "fields": [
+    {
+      "name": "driver_id",
+      "type": "string",
+      "doc": "Unique driver identifier"
+    },
+    {
+      "name": "trip_count",
+      "type": "int",
+      "doc": "Number of trips recorded"
+    },
+    {
+      "name": "total_events",
+      "type": "int",
+      "doc": "Total raw events processed for driver"
+    },
+    {
+      "name": "avg_speed_mps",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Average speed across all trips (m/s)"
+    },
+    {
+      "name": "speed_std",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Standard deviation of speed (m/s)"
+    },
+    {
+      "name": "harsh_brake_rate",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Proportion of events with harsh braking"
+    },
+    {
+      "name": "harsh_accel_rate",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Proportion of events with harsh acceleration"
+    },
+    {
+      "name": "overspeed_rate",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Proportion of events exceeding speed limit + margin"
+    },
+    {
+      "name": "night_trip_ratio",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Proportion of events occurring at night"
+    },
+    {
+      "name": "weekend_trip_ratio",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Proportion of events occurring on weekends"
+    },
+    {
+      "name": "total_km",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Total distance traveled (km, from trips or odometer)"
+    }
+  ]
+}

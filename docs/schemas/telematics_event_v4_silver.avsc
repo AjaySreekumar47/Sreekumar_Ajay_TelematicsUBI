@@ -1,0 +1,348 @@
+{
+  "type": "record",
+  "name": "TelematicsEventSilver",
+  "namespace": "com.insurance.telematics",
+  "doc": "Cleaned and enriched telematics event schema (Silver layer, v4).",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "doc": "Unique identifier for this event (UUID4)"
+    },
+    {
+      "name": "driver_id",
+      "type": "string",
+      "doc": "Anonymized driver identifier"
+    },
+    {
+      "name": "trip_id",
+      "type": "string",
+      "doc": "Unique trip/session identifier"
+    },
+    {
+      "name": "session_id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "Derived session grouping ID"
+    },
+    {
+      "name": "ts",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Event occurrence timestamp"
+    },
+    {
+      "name": "ingestion_ts",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Ingestion timestamp"
+    },
+    {
+      "name": "event_date",
+      "type": "string",
+      "doc": "Partition field: UTC date YYYY-MM-DD"
+    },
+    {
+      "name": "event_seq_no",
+      "type": "int",
+      "doc": "Sequence number within trip/session"
+    },
+    {
+      "name": "lat",
+      "type": "double",
+      "doc": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "double",
+      "doc": "Longitude"
+    },
+    {
+      "name": "speed_mps",
+      "type": "double",
+      "doc": "Speed (m/s)"
+    },
+    {
+      "name": "accel_mps2",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Acceleration"
+    },
+    {
+      "name": "gyro",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Yaw rate"
+    },
+    {
+      "name": "heading",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null,
+      "doc": "Heading [0,360)"
+    },
+    {
+      "name": "odometer_km",
+      "type": "double",
+      "doc": "Odometer reading"
+    },
+    {
+      "name": "source",
+      "type": {
+        "type": "enum",
+        "name": "SourceTypeSilver",
+        "symbols": [
+          "phone",
+          "OBD",
+          "simulator"
+        ]
+      },
+      "doc": "Event source"
+    },
+    {
+      "name": "driver_age_band",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "DriverAgeBandSilver",
+          "symbols": [
+            "UNDER25",
+            "AGE_25_40",
+            "AGE_40_60",
+            "OVER60"
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "license_years",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "accidents_count",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "claims_count",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "violation_points",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "policy_tenure_years",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "vehicle_make",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "vehicle_model_year",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "safety_rating",
+      "type": [
+        "null",
+        "float"
+      ],
+      "default": null
+    },
+    {
+      "name": "vehicle_vin_hash",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "vehicle_type",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "VehicleTypeSilver",
+          "symbols": [
+            "SEDAN",
+            "SUV",
+            "TRUCK",
+            "MOTORCYCLE",
+            "EV",
+            "OTHER"
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "ownership_type",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "OwnershipTypeSilver",
+          "symbols": [
+            "OWNED",
+            "LEASED",
+            "FLEET"
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "weather",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "WeatherTypeSilver",
+          "symbols": [
+            "clear",
+            "rain",
+            "snow",
+            "fog",
+            "other"
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "road_type",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "RoadTypeSilver",
+          "symbols": [
+            "highway",
+            "urban",
+            "rural"
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "posted_speed_limit",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "crime_index",
+      "type": [
+        "null",
+        "float"
+      ],
+      "default": null
+    },
+    {
+      "name": "accident_index",
+      "type": [
+        "null",
+        "float"
+      ],
+      "default": null
+    },
+    {
+      "name": "trip_distance_km",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null
+    },
+    {
+      "name": "trip_duration_sec",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "avg_speed_mps",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null
+    },
+    {
+      "name": "harsh_brake_events",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "harsh_accel_events",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "overspeed_events",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    }
+  ]
+}
