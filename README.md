@@ -31,12 +31,7 @@ Sreekumar_Ajay_TelematicsUBI/
 
 ## ⚙️ Setup Instructions
 
-### Option 1: Google Colab (Recommended for Reviewers)
-1. Open project folder in Colab.  
-2. Run sequential phases (1–7) using provided notebooks/scripts.  
-3. Use Cloudflare tunnel for public Streamlit dashboard URL.
-
-### Option 2: Docker (Self-contained)
+Docker (Self-contained)
 ```bash
 docker build -t telematics-ubi .
 docker run -p 8501:8501 telematics-ubi
